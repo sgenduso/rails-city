@@ -15,5 +15,15 @@
   <%= @zoo.address %>
 </p>
 
+<p>
+  Animals in this zoo:
+</p>
+
+<% @zoo.animals.each do |animal| %>
+
+  <%= animal.name %>
+
+<% end %>
+
 <%= link_to 'Edit', edit_zoo_path(@zoo) %> |
 <%= link_to 'Back', zoos_path %>
